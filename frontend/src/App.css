@@ -1,0 +1,33 @@
+@import '~antd/dist/antd.css';
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica,
+        Arial, sans-serif;
+}
+
+.container {
+    padding: 20px 10px;
+}
+.fullHeight {
+    min-height: 100vh;
+}
+.centered {
+    text-align: center;
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.filters {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 20px;
+}
+
+.calenderPicker {
+    padding: 20px 100px;
+}
