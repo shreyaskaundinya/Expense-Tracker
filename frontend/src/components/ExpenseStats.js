@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Statistic, Card, Row, Col, Typography } from 'antd';
-
-const { Title, Text } = Typography;
+import { Statistic, Card, Row, Col } from 'antd';
 
 function ExpenseList(props) {
     const { expensesList } = props;
@@ -24,7 +22,12 @@ function ExpenseList(props) {
                 <Col span={24}>
                     <Card>
                         <Statistic
-                            title='Amount Spent'
+                            title={
+                                'Amount Spent -> ' +
+                                props.startDate +
+                                ' to ' +
+                                props.endDate
+                            }
                             value={amtSpent}
                             valueStyle={{ color: '#3f8600' }}
                             prefix={'Rs.'}

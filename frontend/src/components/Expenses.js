@@ -44,6 +44,7 @@ function Expenses(props) {
         if (value === null) {
             setStartDate(now);
             setEndDate(now);
+            return;
         }
         //  todays date
         const start = moment(value[0]).format('DD-MM-YYYY');
@@ -82,7 +83,11 @@ function Expenses(props) {
             <div className='container centered'>
                 <Title level={2}>Welcome, {props.user.username}</Title>
                 <Divider>Statistics</Divider>
-                <ExpenseStats expensesList={expensesList} />
+                <ExpenseStats
+                    expensesList={expensesList}
+                    startDate={startDate}
+                    endDate={endDate}
+                />
                 <Divider>Add an Expense</Divider>
                 <ExpenseForm handleAddExpense={handleAddExpense} />
                 <Divider>Filter Expenses</Divider>

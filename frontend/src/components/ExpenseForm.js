@@ -46,7 +46,10 @@ function ExpenseForm(props) {
 
     return (
         <Form {...formLayout} onFinish={props.handleAddExpense}>
-            <Form.Item label='Description' name='desc' rules={formItemRules}>
+            <Form.Item
+                label='Item Name/Description'
+                name='desc'
+                rules={formItemRules}>
                 <Input />
             </Form.Item>
             <Form.Item label='Amount' name='amount' rules={formItemRules}>

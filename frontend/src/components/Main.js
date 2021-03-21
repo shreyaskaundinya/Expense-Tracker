@@ -42,6 +42,12 @@ function Main() {
             </Header>
             <Content>
                 <div className='container'>
+                    <div className='centered'>
+                        <Title>Expense Tracker</Title>
+                        <Text disabled>
+                            Track your expenses and save money.
+                        </Text>
+                    </div>
                     <BrowserRouter>
                         <Switch>
                             <Route path='/'>
